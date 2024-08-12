@@ -1,27 +1,14 @@
-var zeroIndex: number[] = [];
-
-function getZeroIndex(list : any[]){
-    
-    let length : number = list.length;
-
-    for(let i = 0; i < length; i++){
-        if(list[i] === 0){
-            zeroIndex.push(i);
-        }
-    }
-
-}
-
 export const moveZeros = (list : any[]) => {
-    getZeroIndex(list);
-
-    let length: number = zeroIndex.length;
+    
+    let length: number = 0;
     let newList: any[] = [];
     let listLen: number = list.length;
 
     for(let i = 0; i< listLen; i++){
          
-        if(list[i] === 0){} else newList.push(list[i]);
+        if(list[i] === 0){
+            length ++;
+        } else newList.push(list[i]);
     }
 
     for(let i = 0; i< length; i++){

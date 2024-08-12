@@ -1,22 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.moveZeros = void 0;
-var zeroIndex = [];
-function getZeroIndex(list) {
-    let length = list.length;
-    for (let i = 0; i < length; i++) {
-        if (list[i] === 0) {
-            zeroIndex.push(i);
-        }
-    }
-}
 const moveZeros = (list) => {
-    getZeroIndex(list);
-    let length = zeroIndex.length;
+    let length = 0;
     let newList = [];
     let listLen = list.length;
     for (let i = 0; i < listLen; i++) {
-        if (list[i] === 0) { }
+        if (list[i] === 0) {
+            length++;
+        }
         else
             newList.push(list[i]);
     }
